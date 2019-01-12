@@ -1,0 +1,27 @@
+---
+  - hosts: webservers
+    become: yes
+
+    tasks:
+    - name: install Java
+      yum: name=java-1.8.0-openjdk state=latest
+    - name: add group "devops"
+      group: name=devops
+
+    - name: add user "devops"
+      user: name=devops group=devops
+
+    - name: This sets up an httpd webserver
+
+    - name: Install apache packages
+      yum: name: httpd state: present
+
+    - name: ensure httpd is running
+      service: name: httpd state: started
+    - name: ensure httpd is enabled
+      service: http state: enabled permanent: true
+
+    - name: Ansible copy directory to the remote server
+      copy:
+        src:$workspace/index.html
+        dest:/var/www/html
