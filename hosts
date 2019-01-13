@@ -1,4 +1,9 @@
-[webservers]
 web1 ansible_host=10.0.1.179
 web2 ansible_host=10.0.1.192
 web3 ansible_host=10.0.1.230
+
+
+[webservers]
+web1
+web2
+web3
