@@ -20,4 +20,4 @@
       service: name=httpd state=started enabled=yes
 
     - name: Ansible copy directory to the remote server
-      copy: src=/home/ansible/ansible01/index.html dest=/var/www/html
+      copy: src=/var/lib/jenkins/workspace/Ansiblejob/index.html dest=/var/www/html
