@@ -1,0 +1,6 @@
+---
+# essential tasks: should run on all nodes
+ - name: creating awsops group
+   group: name=awsops state=present
+ - name: create awsops user
+   user: name=awsops comment="DevOps User" uid=2001 group=awsops
