@@ -19,5 +19,4 @@
     - name: ensure httpd is running
       service: name=httpd state=started enabled=yes
 
-    - name: Ansible copy directory to the remote server
-copy: src=/var/lib/jenkins/workspace/Ansiblejob/index.html dest=/var/www/html
+   

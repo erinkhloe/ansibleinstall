@@ -5,8 +5,8 @@
     tasks:
     - name: install Java
       yum: name=java-1.8.0-openjdk state=latest
-    - name: add group "devops"
-      group: name=devops
+    - name: add group "onejob"
+      group: name=onejob
 
-    - name: add user "devops"
-      user: name=devops group=devops
+    - name: add user "onejob"
+      user: name=devops group=onejob
